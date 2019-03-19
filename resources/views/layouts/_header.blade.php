@@ -17,8 +17,8 @@
       <!-- Right Side Of Navbar -->
       <ul class="navbar-nav navbar-right">
         <!-- Authentication Links -->
-        <li class="nav-item"><a class="nav-link" href="#">Log in</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Log in</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Sign up</a></li>
       </ul>
     </div>
   </div>

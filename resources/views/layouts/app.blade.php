@@ -21,6 +21,8 @@ _footer.blade.php - the tail region file of the layout, responsible for the bott
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
+  @yield('styles')
+
 </head>
 
 <body>
@@ -41,6 +43,7 @@ _footer.blade.php - the tail region file of the layout, responsible for the bott
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}"></script>
+  @yield('scripts')
 </body>
 
 </html>

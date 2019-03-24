@@ -16820,6 +16820,10 @@ readers do not read off random characters that represent icons */
   line-height: 38px;
 }
 
+.topics-show-page .operate {
+  text-align: center;
+}
+
 /* universal */
 
 body {

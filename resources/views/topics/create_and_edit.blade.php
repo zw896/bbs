@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('styles')
+{{-- @section('styles')
   <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
 @stop
 
@@ -27,7 +27,7 @@
       });
     });
   </script>
-@stop
+@stop --}}
 
 @section('content')
 

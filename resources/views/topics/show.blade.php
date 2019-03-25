@@ -10,16 +10,16 @@
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info">
       <div class="card ">
         <div class="card-body">
-          <div class="text-center">
-            Author: {{ $topic->user->name }}
-          </div>
-          <hr>
           <div class="media">
             <div align="center">
               <a href="{{ route('users.show', $topic->user->id) }}">
                 <img class="thumbnail img-fluid" src="{{ $topic->user->avatar }}" width="300px" height="300px">
               </a>
             </div>
+          </div>
+          <hr>
+          <div class="text-center">
+            Author: {{ $topic->user->name }}
           </div>
         </div>
       </div>
@@ -60,9 +60,18 @@
               </form>
             </div>
           @endcan
-
         </div>
       </div>
+
+      {{-- user reply list --}}
+      <div class="card topic-reply mt-4">
+          <div class="card-body">
+              {{-- @include('topics._reply_box', ['topic' => $topic]) --}}
+              @includeWhen(Auth::check(), 'topics._reply_box', ['topic' => $topic])
+              @include('topics._reply_list', ['replies' => $topic->replies()->with('user')->get()])
+          </div>
+      </div>
+
     </div>
   </div>
 @stop

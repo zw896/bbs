@@ -16936,7 +16936,7 @@ body {
   max-width: 100%;
 }
 
-/* 回复列表 */
+/* reply list */
 
 .topic-reply a {
   color: inherit;
@@ -16945,5 +16945,20 @@ body {
 .topic-reply .meta {
   font-size: 0.9em;
   color: #b3b3b3;
+}
+
+/* _header notification */
+
+.notification-badge .badge {
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.notification-badge .badge-secondary {
+  background-color: #EBE8E8;
+}
+
+.notification-badge .badge-hint {
+  background-color: #d15b47 !important;
 }
 
